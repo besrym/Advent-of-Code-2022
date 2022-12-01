@@ -1,11 +1,11 @@
-#include "iostream"
+#include <iostream>
 #include <fstream>
 #include <vector>
 
 int main(){
 
     std::string line;
-    std::vector<int> elfs;
+    std::vector<int> elves;
     int calo = 0;
 
     std::ifstream infile("input.txt");
@@ -14,7 +14,7 @@ int main(){
     while (std::getline(infile, line)) {
 
         if (line.empty()){
-            elfs.push_back(calo);
+            elves.push_back(calo);
             calo = 0;
         }
         else{
@@ -23,18 +23,18 @@ int main(){
         }
     }
 
-    int three = 0;
-    int maxElementIndex1 = std::max_element(elfs.begin(),elfs.end()) - elfs.begin();
+    int top_three = 0;
+    int maxElementIndex1 = std::max_element(elves.begin(),elves.end()) - elves.begin();
 
     for (int i = 0; i<3; i++){
-        int p = *std::max_element(elfs.begin(), elfs.end());
-        int maxElementIndex = std::max_element(elfs.begin(),elfs.end()) - elfs.begin();
-        elfs.erase (elfs.begin() + maxElementIndex);
-        three += p;
+        int p = *std::max_element(elves.begin(), elves.end());
+        int maxElementIndex = std::max_element(elves.begin(),elves.end()) - elves.begin();
+        elves.erase(elves.begin() + maxElementIndex);
+        top_three += p;
     }
 
     std::cout << maxElementIndex1 << std::endl;
-    std::cout << three << std::endl;
+    std::cout << top_three << std::endl;
 
 }
 
