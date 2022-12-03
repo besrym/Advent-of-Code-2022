@@ -18,7 +18,6 @@ int findDuplicate(string A, string B){
     for (auto itA : countA){
         for (auto itB : countB) {
             if (itA.first == itB.first){
-                cout << itA.first << " " << endl;
                 c = itA.first;
             }
         }
@@ -36,17 +35,13 @@ int part2(string A){
     char c;
     for (auto it : count) {
         if (it.second == 3){
-            cout << it.first << endl;
             c = it.first;
         }
     }
     return abc.find(c) + 1;
 }
 
-
-
 string remove_duplicates(string s){
-    //std::cout << '\"' << s << '\"' << std::endl;
 
     for ( std::string::size_type i = 0; i < s.size(); i++ )
     {
@@ -64,7 +59,6 @@ string remove_duplicates(string s){
         }
     }
 
-    std::cout << '\"' << s << '\"' << std::endl;
     return s;
 }
 
@@ -93,10 +87,10 @@ int main(){
         string C = V[i+2];
 
         strGroup = remove_duplicates(A) + remove_duplicates(B) + remove_duplicates(C);
-        cout << strGroup << endl;
+        //cout << strGroup << endl;
         priorities_p2 += part2(strGroup);
     }
 
-    cout << priorities_p1 << endl;
-    cout << priorities_p2 << endl;
+    cout << "part 1: " << priorities_p1 << endl;
+    cout << "part 2: " << priorities_p2 << endl;
 }
