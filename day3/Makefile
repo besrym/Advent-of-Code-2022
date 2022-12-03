@@ -2,14 +2,14 @@ CXX=g++
 CXXFLAGS=-O1 -std=c++11
 
 all: run
-run: day2
-	./day2
+run: day3
+	./day3
 
 %.o: %.cpp
 	$(CXX) -c -o $@ $< $(CXXFLAGS)
 
-day2: day2.o
+day3: day3.o
 	$(CXX) -o $@ $^ $(CXXFLAGS)
 
 clean:
-	rm -f day2.o day2
+	rm -f day3.o day3
