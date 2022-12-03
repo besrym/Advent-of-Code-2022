@@ -87,7 +87,6 @@ int main(){
         string C = V[i+2];
 
         strGroup = remove_duplicates(A) + remove_duplicates(B) + remove_duplicates(C);
-        //cout << strGroup << endl;
         priorities_p2 += part2(strGroup);
     }
 
