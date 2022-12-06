@@ -23,7 +23,7 @@ def init_container(file):
             container.append([])
         for line in f:
             for k, item in enumerate(line):
-                if item == 'X' or item == "\n":
+                if item == "X" or item == "\n":
                     continue
                 else:
                     container[k].append(item)
